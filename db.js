@@ -1,9 +1,5 @@
 function find(id) {
-  if (id > 10) {
-    return null;
-  }
-
-  return { id }
+  return id > 10 ? null : { id }
 }
 
 module.exports = { find }
