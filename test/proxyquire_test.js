@@ -1,10 +1,5 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-/**
- * This test file needs to be run on it's own, without even reading other test files that require('../app').
- * This is weird, as per the proxyquire docs, the require cache should kick in if you're not messing with it,
- * so multiple servers should not be started https://www.npmjs.com/package/proxyquire#forcing-proxyquire-to-reload-modules
- */
 const proxyquire = require('proxyquire');
 let dbMock = {};
 const server = proxyquire('../app', { './db': dbMock });
