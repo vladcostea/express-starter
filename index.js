@@ -1,4 +1,6 @@
 const app = require('./app');
+const db = require('./app/db');
+const routes = require('./app/routes');
 const port = 4000;
 
 function onListen() {
@@ -7,4 +9,5 @@ function onListen() {
   }
 }
 
+app.use(routes.createRoutes(db));
 app.listen(port, onListen);
