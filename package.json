@@ -4,9 +4,7 @@
   "description": "express.js starter template app",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --exit --reporter dot \"test/requests_test.js\" ",
-    "test_rewire": "NODE_ENV=test ./node_modules/mocha/bin/mocha --exit --reporter dot \"test/rewire_test.js\"",
-    "test_proxyquire": "NODE_ENV=test ./node_modules/mocha/bin/mocha --exit --reporter dot \"test/proxyquire_test.js\""
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --exit --reporter dot \"test/**/*_test.js\" "
   },
   "keywords": [
     "express"

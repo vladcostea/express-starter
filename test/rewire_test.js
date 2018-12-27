@@ -1,13 +1,13 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 /**
- * This test file needs to be run on it's own, without even reading other test files that require('../index').
+ * This test file needs to be run on it's own, without even reading other test files that require('../app').
  * https://github.com/jhnns/rewire#caveats
  * 'Every call of rewire() executes the module again and returns a fresh instance.' - this causes a new server to be
  * started and you'd most likely run into 'Address in use' error because you're running it with the same port
  */
 const rewire = require('rewire');
-const server = rewire('../index');
+const server = rewire('../app');
 
 chai.use(chaiHttp);
 const request = chai.request;
